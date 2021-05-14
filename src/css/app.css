@@ -1,0 +1,229 @@
+* {
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+    outline    : none;
+    user-select: none !important;
+}
+
+@font-face {
+    font-family: font_1;
+    src        : url(../fonts/1.ttf);
+}
+
+#root {
+    background: #CB356B;
+    background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);
+    background: linear-gradient(to right, #BD3F32, #CB356B);
+
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 100%;
+    height         : 100%;
+    position       : absolute;
+    font-family    : 'Ubuntu', sans-serif;
+}
+
+/* -- Contenedor -- */
+#root>div:nth-child(1) {
+    background-color: #101010;
+    width           : 310px;
+    height          : 600px;
+    border-radius   : 28px;
+    position        : relative;
+    box-shadow      : 0 3px 20px 0 #0005;
+    border          : 7px solid #000;
+}
+
+/* -- Navbar -- */
+#root .content>nav:nth-child(1) {
+    width           : 100%;
+    height          : 26px;
+    background-color: #191919;
+    border-radius   : 18px 18px 0 0;
+    /*--
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    --*/
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    padding         : 0 10px;
+}
+
+/* -- (i) de Nav -- */
+#root .content>nav:nth-child(1) i {
+    color : #fff;
+    margin: 0 2px;
+}
+
+/* -- (span) de .signal < nav -- */
+.signal>span:nth-child(3) {
+    color      : #fff;
+    font-weight: bolder;
+    font-size  : 12px;
+}
+
+#face {
+    color: rgb(0, 183, 255) !important;
+}
+
+#whas {
+    color: rgb(0, 212, 0) !important;
+}
+
+
+footer {
+    width           : 100%;
+    height          : 38px;
+    background-color: #101010;
+    position        : absolute;
+    bottom          : 0;
+    border-radius   : 0 0 18px 18px;
+
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+}
+
+footer i {
+    color: #fff;
+}
+
+footer i:nth-child(1) {
+    font-size: 35px;
+}
+
+footer i:nth-child(2) {
+    font-size: 19px;
+    margin   : 0 5px;
+}
+
+
+footer i:nth-child(3) {
+    font-size: 17px;
+}
+
+
+
+/* --- Botones de reproduccion --- */
+/* ------- ¡ Importante ! -------- */
+.player {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 100%;
+    height          : 1fr;
+    user-select     : none;
+    height          : 30px;
+    background-color: #ededed;
+}
+
+
+input#volumeslider {
+    width        : 60px;
+    outline      : none;
+    border-radius: 15px;
+}
+
+input#seekslider {
+    width        : 30px;
+    outline      : none;
+    border       : none;
+    border-radius: 10px;
+    display      : none;
+}
+
+/* Skin Default GiiberJs */
+/* Editable Skin */
+#volumeslider,
+#seekslider {
+    -webkit-appearance: none !important;
+
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 50%, rgb(255, 53, 114) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 50%, rgb(255, 53, 114) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(32, 32, 32, 1) 50%, rgb(255, 53, 114) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#fc4545", GradientType=1);
+
+    height       : 10px;
+    border-radius: 0px;
+    padding      : 5px;
+    margin-left  : 20px;
+}
+
+/* Circle of the Skin */
+#seekslider::-webkit-slider-thumb,
+#volumeslider::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background        : #fff;
+    height            : 6px;
+    width             : 6px;
+    border-radius     : 50%;
+    transition        : 0.23s;
+}
+
+#volumeslider::-webkit-slider-thumb:active {
+    background-color: #000;
+}
+
+#playpausebtn {
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    height       : 1fr;
+    width        : 1fr;
+    margin-right : 5px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+#playpausebtn:hover {
+    color: pink;
+}
+
+#mutebtn {
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    height       : 1fr;
+    width        : 1fr;
+    margin-left : 10px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+#mutebtn:hover {
+    color: rgb(255, 53, 114);
+}
+
+
+#tirbox {
+    display        : inline-flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    width          : 100px;
+    height         : 100%;
+    color          : #fff;
+    margin-left    : 20px;
+    border-radius  : 5px;
+    font-weight    : bolder;
+}
+
+/* ---- Disable
+#change {
+    width           : 80px;
+    height          : 100%;
+    background-color: #202020;
+    color           : #ffffff;
+    margin          : 5px;
+
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    font-family    : arial;
+    cursor         : pointer;
+}
+------- */
